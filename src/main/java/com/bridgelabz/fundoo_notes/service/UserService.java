@@ -6,6 +6,8 @@ import com.bridgelabz.fundoo_notes.dto.UserDto;
 import com.bridgelabz.fundoo_notes.entity.User;
 import com.bridgelabz.fundoo_notes.exception.UserException;
 import com.bridgelabz.fundoo_notes.repository.UserRepository;
+import com.bridgelabz.fundoo_notes.utility.JwtToken;
+import com.bridgelabz.fundoo_notes.utility.PasswordEncoder;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,7 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
-public class UserService implements IService{
+public class UserService implements IService {
 
     @Autowired
     ModelMapper modelMapper;
@@ -25,16 +27,20 @@ public class UserService implements IService{
     @Autowired
     JwtToken jwtToken;
 
+    @Autowired
+    PasswordEncoder encoder;
+
     @Override
     public String registerUser(UserDto userDto) throws UserException {
         User user = modelMapper.map(userDto, User.class);
         User alreadyRegisteredUser = userRepository.findByEmail(user.getEmail());
         user.setRegisterDate(new Date());
+        user.setPassword(encoder.encodePassword(userDto.getPassword()));
         if (alreadyRegisteredUser != null) {
-            return  "This Email is already registered with us";
+            return "This Email is already registered with us";
         }
         userRepository.save(user);
-        return "User is Successfully stored in db " + user ;
+        return "User is Successfully stored in db " + user;
     }
 
     @Override
@@ -42,12 +48,12 @@ public class UserService implements IService{
         User registeredUser = userRepository.findByEmail(loginDto.getEmail());
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         if (registeredUser != null) {
-            if (encoder.matches(loginDto.getPassword(),registeredUser.getPassword())) {
+            if (encoder.matches(loginDto.getPassword(), registeredUser.getPassword())) {
                 String token = jwtToken.generateToken(loginDto);
-                return "Login Successfully with " +loginDto.getEmail()+ " Token= " +token;
+                return "Login Successfully with " + loginDto.getEmail() + " Token= " + token;
             }
         }
-        return  "Invalid Email Id or Password";
+        return "Invalid Email Id or Password";
     }
 
     @Override
@@ -68,7 +74,7 @@ public class UserService implements IService{
             }
             userRepository.save(registeredUser);
             return "Details successfully updated";
-        } else return  "User not found";
+        } else return "User not found";
     }
 
     @Override
@@ -77,8 +83,8 @@ public class UserService implements IService{
         if (registeredUser != null) {
             userRepository.deleteById(id);
             return "User Successfully deleted from db";
-        }else
-        return  "Invalid Details";
+        } else
+            return "Invalid Details";
     }
 
     @Override
@@ -86,12 +92,11 @@ public class UserService implements IService{
         User registeredUser = userRepository.findByEmail(forgetDto.getEmail());
         if (registeredUser != null) {
             if ((forgetDto.getName()).matches(registeredUser.getName()) && (forgetDto.getNumber()).matches(registeredUser.getNumber()) && forgetDto.getPassword() != null) {
-                registeredUser.setPassword(forgetDto.getPassword());
-
+                registeredUser.setPassword(encoder.encodePassword(forgetDto.getPassword()));
                 userRepository.save(registeredUser);
                 return "Password Successfully Changed";
             }
         }
-        return  "You Entered wrong details";
+        return "You Entered wrong details";
     }
 }

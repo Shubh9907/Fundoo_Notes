@@ -14,11 +14,4 @@ public class ForgetDto {
     private String email;
     private String number;
     private String password;
-
-    public void setPassword(String password) {
-        String encPass = null;
-        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-        encPass = bCryptPasswordEncoder.encode(password);
-        this.password = encPass;
-    }
 }

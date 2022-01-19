@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.service;
+package com.bridgelabz.fundoo_notes.utility;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
