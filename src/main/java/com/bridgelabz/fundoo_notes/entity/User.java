@@ -25,4 +25,5 @@ public class User {
     private String password;
     private String number;
     private Date registerDate;
+    private Boolean isVerified = false;
 }

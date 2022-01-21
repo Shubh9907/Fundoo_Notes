@@ -16,6 +16,10 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.UUID;
 
+/**
+ * this class is used to generate jwt token
+ * @author Shubham Verma
+ */
 @Component
 public class JwtToken {
 
@@ -25,12 +29,12 @@ public class JwtToken {
     static String TOKEN_SECRET = "javaDemo123";
 
 
-    public String generateToken(LoginDto loginDto) {
+    public String generateToken(String emailId) {
 
         Algorithm algorithm = Algorithm.HMAC256(TOKEN_SECRET);
         //payload
         return JWT.create()
-                .withClaim("email", loginDto.getEmail())
+                .withClaim("email", emailId)
                 .sign(algorithm);
 
 //        return Jwts.builder()
