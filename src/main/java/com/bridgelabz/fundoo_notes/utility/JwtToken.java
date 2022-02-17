@@ -18,6 +18,7 @@ import java.util.UUID;
 
 /**
  * this class is used to generate jwt token
+ *
  * @author Shubham Verma
  */
 @Component

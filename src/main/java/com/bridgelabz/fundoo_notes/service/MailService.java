@@ -12,6 +12,7 @@ import java.util.Properties;
 
 /**
  * This Class is used for sending the mail to the user
+ *
  * @author Shubham Verma
  */
 @Component
@@ -36,7 +37,7 @@ public class MailService {
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-        props.put("mail.smtp.ssl.protocols","TLSv1.2");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
         String token = jwtToken.generateToken(email);
 
@@ -49,11 +50,11 @@ public class MailService {
         try {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(sender));
-            message.addRecipient(Message.RecipientType.TO, new  InternetAddress(email));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
             if (!throughForget) {
                 message.setSubject("Fundoo Email verification link");
-                message.setText("Click on the below link to verify your email id http://localhost:8080/verifyUser/" + token);
-            }else {
+                message.setText("Click on the below link to verify your email id http://localhost:8080/api/verifyUser/" + token);
+            } else {
                 message.setSubject("Fundoo Password Reset Link");
                 message.setText("Click on the link and use token given below to reset your password http://localhost:8080/swagger-ui.html#!/controller/changePasswordUsingPUT \n Your password reset Token is:- " + token);
             }
