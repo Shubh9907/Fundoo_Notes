@@ -1,5 +1,7 @@
 package com.bridgelabz.fundoo_notes.entity;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +27,9 @@ public class Note {
 	
 	private String title;
 	private String noteBody;
+	private boolean inTrash;
+	private boolean inArchieve;
+	private Date trashedDate;
 	
 	@ManyToOne
 	@JsonIgnore

@@ -53,8 +53,20 @@ public class NoteController {
 	}
 	
 	@DeleteMapping("/note/{id}")
-	public ResponseEntity<ApiResponse> deleteNote(@PathVariable Integer id) {
-		ApiResponse response = iNoteService.deleteNote(id);
+	public ResponseEntity<ApiResponse> deleteNote(@PathVariable Integer id, @RequestHeader String token) {
+		ApiResponse response = iNoteService.deleteNote(id, token);
 		return new ResponseEntity<ApiResponse>(response , HttpStatus.OK);	
+	}
+	
+	@PutMapping("/trashNote/{id}")
+	public ResponseEntity<ApiResponse> trashNote(@PathVariable Integer id, @RequestHeader String token) {
+		ApiResponse response = iNoteService.trashNote(id, token);
+		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
+	}
+	
+	@PutMapping("/archieveNote/{id}")
+	public ResponseEntity<ApiResponse> archieveNote(@PathVariable Integer id, @RequestHeader String token) {
+		ApiResponse response = iNoteService.archieveNote(id, token);
+		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
 }

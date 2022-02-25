@@ -11,5 +11,11 @@ public interface INoteService {
 
 	public ApiResponse updateNote(Integer id, NoteDto noteDto);
 
-	public ApiResponse deleteNote(Integer id);
+	public ApiResponse deleteNote(Integer id, String token) ;
+
+	public ApiResponse trashNote(Integer id, String token);
+
+	public ApiResponse archieveNote(Integer id, String token);
+	
+	public void deleteTrashedNote();
 }
