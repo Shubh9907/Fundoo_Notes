@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.dto;
+package com.bridgelabz.fundoo_notes.note.dto;
 
 import lombok.Getter;
 import lombok.Setter;

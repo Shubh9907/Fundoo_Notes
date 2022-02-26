@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.service;
+package com.bridgelabz.fundoo_notes.note.service;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -11,13 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.bridgelabz.fundoo_notes.dto.NoteDto;
 import com.bridgelabz.fundoo_notes.entity.Note;
 import com.bridgelabz.fundoo_notes.entity.User;
-import com.bridgelabz.fundoo_notes.exception.NoteException;
-import com.bridgelabz.fundoo_notes.exception.UserException;
-import com.bridgelabz.fundoo_notes.repository.NotesRepository;
-import com.bridgelabz.fundoo_notes.repository.UserRepository;
+import com.bridgelabz.fundoo_notes.note.dto.NoteDto;
+import com.bridgelabz.fundoo_notes.note.exception.NoteException;
+import com.bridgelabz.fundoo_notes.note.repository.NotesRepository;
+import com.bridgelabz.fundoo_notes.user.exception.UserException;
+import com.bridgelabz.fundoo_notes.user.repository.UserRepository;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 import com.bridgelabz.fundoo_notes.utility.JwtToken;
 

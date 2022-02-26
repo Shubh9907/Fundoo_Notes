@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.repository;
+package com.bridgelabz.fundoo_notes.note.repository;
 
 import java.util.Optional;
 

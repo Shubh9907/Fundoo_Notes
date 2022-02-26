@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.dto;
+package com.bridgelabz.fundoo_notes.user.dto;
 
 import javax.validation.constraints.Pattern;
 

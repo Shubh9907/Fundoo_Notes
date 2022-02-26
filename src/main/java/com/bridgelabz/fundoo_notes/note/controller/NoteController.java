@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.controller;
+package com.bridgelabz.fundoo_notes.note.controller;
 
 import java.util.List;
 
@@ -16,11 +16,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bridgelabz.fundoo_notes.dto.NoteDto;
 import com.bridgelabz.fundoo_notes.entity.Note;
-
-import com.bridgelabz.fundoo_notes.repository.NotesRepository;
-import com.bridgelabz.fundoo_notes.service.INoteService;
+import com.bridgelabz.fundoo_notes.note.dto.NoteDto;
+import com.bridgelabz.fundoo_notes.note.repository.NotesRepository;
+import com.bridgelabz.fundoo_notes.note.service.INoteService;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 
 @RestController

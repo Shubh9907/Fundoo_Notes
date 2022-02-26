@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.exception;
+package com.bridgelabz.fundoo_notes.note.exception;
 
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 

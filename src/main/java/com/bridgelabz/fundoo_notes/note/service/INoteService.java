@@ -1,6 +1,6 @@
-package com.bridgelabz.fundoo_notes.service;
+package com.bridgelabz.fundoo_notes.note.service;
 
-import com.bridgelabz.fundoo_notes.dto.NoteDto;
+import com.bridgelabz.fundoo_notes.note.dto.NoteDto;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 
 public interface INoteService {

@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.service;
+package com.bridgelabz.fundoo_notes.utility;
 
 import com.bridgelabz.fundoo_notes.utility.JwtToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +28,8 @@ public class MailService {
 
     public String sendMail(String email) {
         final String host = "smtp.gmail.com";
-        final String sender = "mailboxofshubh@gmail.com";
-        final String pass = "Verma@123Shubham";
+        final String sender = System.getenv("MY_USERNAME");
+        final String pass = System.getenv("MY_PASSWORD");
 
         Properties props = new Properties();
         props.put("mail.smtp.host", host);

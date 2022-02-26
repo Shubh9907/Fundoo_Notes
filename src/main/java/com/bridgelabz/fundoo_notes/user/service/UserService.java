@@ -1,12 +1,13 @@
-package com.bridgelabz.fundoo_notes.service;
+package com.bridgelabz.fundoo_notes.user.service;
 
-import com.bridgelabz.fundoo_notes.dto.PasswordDto;
-import com.bridgelabz.fundoo_notes.dto.LoginDto;
-import com.bridgelabz.fundoo_notes.dto.UserDto;
 import com.bridgelabz.fundoo_notes.entity.User;
-import com.bridgelabz.fundoo_notes.exception.UserException;
-import com.bridgelabz.fundoo_notes.repository.UserRepository;
+import com.bridgelabz.fundoo_notes.user.dto.LoginDto;
+import com.bridgelabz.fundoo_notes.user.dto.PasswordDto;
+import com.bridgelabz.fundoo_notes.user.dto.UserDto;
+import com.bridgelabz.fundoo_notes.user.exception.UserException;
+import com.bridgelabz.fundoo_notes.user.repository.UserRepository;
 import com.bridgelabz.fundoo_notes.utility.JwtToken;
+import com.bridgelabz.fundoo_notes.utility.MailService;
 import com.bridgelabz.fundoo_notes.utility.PasswordEncoder;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 
@@ -60,7 +61,7 @@ public class UserService implements IService {
 
         }
         userRepository.save(user);
-//        String msg = mailService.sendMail(userDto.getEmail());
+        String msg = mailService.sendMail(userDto.getEmail());
         
     	apiResponse = new ApiResponse(environment.getProperty("user.successfullyRegistered"), 2, null);
     	

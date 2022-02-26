@@ -1,12 +1,11 @@
-package com.bridgelabz.fundoo_notes.controller;
+package com.bridgelabz.fundoo_notes.user.controller;
 
-import com.bridgelabz.fundoo_notes.dto.PasswordDto;
-import com.bridgelabz.fundoo_notes.dto.LoginDto;
-import com.bridgelabz.fundoo_notes.dto.UserDto;
 import com.bridgelabz.fundoo_notes.entity.User;
-import com.bridgelabz.fundoo_notes.exception.UserException;
-import com.bridgelabz.fundoo_notes.repository.UserRepository;
-import com.bridgelabz.fundoo_notes.service.IService;
+import com.bridgelabz.fundoo_notes.user.dto.LoginDto;
+import com.bridgelabz.fundoo_notes.user.dto.PasswordDto;
+import com.bridgelabz.fundoo_notes.user.dto.UserDto;
+import com.bridgelabz.fundoo_notes.user.repository.UserRepository;
+import com.bridgelabz.fundoo_notes.user.service.IService;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 
 import io.swagger.annotations.ApiOperation;

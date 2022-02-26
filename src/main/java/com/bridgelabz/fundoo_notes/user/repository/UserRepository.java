@@ -1,4 +1,4 @@
-package com.bridgelabz.fundoo_notes.repository;
+package com.bridgelabz.fundoo_notes.user.repository;
 
 import com.bridgelabz.fundoo_notes.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

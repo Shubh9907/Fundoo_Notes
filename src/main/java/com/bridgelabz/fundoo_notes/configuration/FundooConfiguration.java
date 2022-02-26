@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:message.properties")
-public class UserConfiguration {
+public class FundooConfiguration {
 
     @Bean
     public ModelMapper modelMapper() {
