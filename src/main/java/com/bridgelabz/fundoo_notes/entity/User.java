@@ -13,6 +13,9 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+//import org.springframework.data.elasticsearch.annotations.Document;
+
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,6 +24,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Entity
+//@Document(indexName="users")
 public class User {
 
     @Id
@@ -35,5 +39,6 @@ public class User {
     private Boolean isVerified = false;
     
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL ,  fetch=FetchType.LAZY )
+    @JsonIgnore
     private List<Note> notes;
 }

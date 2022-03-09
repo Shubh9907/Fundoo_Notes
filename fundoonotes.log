@@ -1,0 +1,532 @@
+[2022-03-09T11:20:20,053][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] version[8.0.0], pid[24593], build[default/tar/1b6a7ece17463df5ff54a3e1302d825889aa1161/2022-02-03T16:47:57.507843096Z], OS[Linux/5.4.0-100-generic/amd64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.1/17.0.1+12]
+[2022-03-09T11:20:20,199][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM home [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/jdk], using bundled JDK [true]
+[2022-03-09T11:20:20,200][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=ALL-UNNAMED, -XX:+UseG1GC, -Djava.io.tmpdir=/tmp/elasticsearch-11240728913019107622, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Xms7884m, -Xmx7884m, -XX:MaxDirectMemorySize=4133486592, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.path.home=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0, -Des.path.conf=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+[2022-03-09T11:20:34,462][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2022-03-09T11:20:34,463][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2022-03-09T11:20:34,463][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2022-03-09T11:20:40,084][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [aggs-matrix-stats]
+[2022-03-09T11:20:40,086][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [analysis-common]
+[2022-03-09T11:20:40,087][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [constant-keyword]
+[2022-03-09T11:20:40,087][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [frozen-indices]
+[2022-03-09T11:20:40,088][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-common]
+[2022-03-09T11:20:40,088][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-geoip]
+[2022-03-09T11:20:40,088][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-user-agent]
+[2022-03-09T11:20:40,088][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [kibana]
+[2022-03-09T11:20:40,088][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-expression]
+[2022-03-09T11:20:40,089][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-mustache]
+[2022-03-09T11:20:40,089][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-painless]
+[2022-03-09T11:20:40,089][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [legacy-geo]
+[2022-03-09T11:20:40,089][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-extras]
+[2022-03-09T11:20:40,089][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-version]
+[2022-03-09T11:20:40,089][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [parent-join]
+[2022-03-09T11:20:40,090][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [percolator]
+[2022-03-09T11:20:40,090][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [rank-eval]
+[2022-03-09T11:20:40,090][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [reindex]
+[2022-03-09T11:20:40,090][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repositories-metering-api]
+[2022-03-09T11:20:40,090][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-azure]
+[2022-03-09T11:20:40,091][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-encrypted]
+[2022-03-09T11:20:40,091][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-gcs]
+[2022-03-09T11:20:40,091][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-s3]
+[2022-03-09T11:20:40,091][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-url]
+[2022-03-09T11:20:40,091][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [runtime-fields-common]
+[2022-03-09T11:20:40,091][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [search-business-rules]
+[2022-03-09T11:20:40,092][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [searchable-snapshots]
+[2022-03-09T11:20:40,092][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-based-recoveries]
+[2022-03-09T11:20:40,092][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-repo-test-kit]
+[2022-03-09T11:20:40,092][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [spatial]
+[2022-03-09T11:20:40,092][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transform]
+[2022-03-09T11:20:40,092][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transport-netty4]
+[2022-03-09T11:20:40,093][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [unsigned-long]
+[2022-03-09T11:20:40,093][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vector-tile]
+[2022-03-09T11:20:40,093][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vectors]
+[2022-03-09T11:20:40,093][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [wildcard]
+[2022-03-09T11:20:40,093][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-aggregate-metric]
+[2022-03-09T11:20:40,093][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-analytics]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async-search]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-autoscaling]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ccr]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-core]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-data-streams]
+[2022-03-09T11:20:40,094][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-deprecation]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-enrich]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-eql]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-fleet]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-graph]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-identity-provider]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ilm]
+[2022-03-09T11:20:40,095][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-logstash]
+[2022-03-09T11:20:40,096][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ml]
+[2022-03-09T11:20:40,096][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-monitoring]
+[2022-03-09T11:20:40,096][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ql]
+[2022-03-09T11:20:40,096][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-rollup]
+[2022-03-09T11:20:40,096][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-security]
+[2022-03-09T11:20:40,096][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-shutdown]
+[2022-03-09T11:20:40,097][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-sql]
+[2022-03-09T11:20:40,097][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-stack]
+[2022-03-09T11:20:40,097][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-text-structure]
+[2022-03-09T11:20:40,097][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-voting-only-node]
+[2022-03-09T11:20:40,097][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-watcher]
+[2022-03-09T11:20:40,098][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] no plugins loaded
+[2022-03-09T11:20:40,528][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] using [1] data paths, mounts [[/ (/dev/sda3)]], net usable_space [812.3gb], net total_space [910.1gb], types [ext4]
+[2022-03-09T11:20:40,529][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] heap size [7.6gb], compressed ordinary object pointers [true]
+[2022-03-09T11:20:41,554][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] node name [shubham-Latitude-3510], node ID [utM-qrtjTjmVzm0EHjihQg], cluster name [fundoonotes], roles [transform, data_content, data_warm, master, remote_cluster_client, data, data_cold, ingest, data_frozen, ml, data_hot]
+[2022-03-09T11:20:57,774][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [shubham-Latitude-3510] [controller/24916] [Main.cc@123] controller (64 bit): Version 8.0.0 (Build 5e85495ea85316) Copyright (c) 2022 Elasticsearch BV
+[2022-03-09T11:20:58,362][INFO ][o.e.x.s.Security         ] [shubham-Latitude-3510] Security is enabled
+[2022-03-09T11:20:58,778][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [trial], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T11:20:58,802][INFO ][o.e.x.s.a.s.FileRolesStore] [shubham-Latitude-3510] parsed [0] roles from file [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config/roles.yml]
+[2022-03-09T11:21:01,811][INFO ][o.e.t.n.NettyAllocator   ] [shubham-Latitude-3510] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2022-03-09T11:21:02,045][INFO ][o.e.d.DiscoveryModule    ] [shubham-Latitude-3510] using discovery type [zen] and seed hosts providers [settings]
+[2022-03-09T11:21:03,543][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] initialized
+[2022-03-09T11:21:03,544][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] starting ...
+[2022-03-09T11:21:03,722][INFO ][o.e.x.s.c.f.PersistentCache] [shubham-Latitude-3510] persistent cache index loaded
+[2022-03-09T11:21:03,725][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [shubham-Latitude-3510] deprecation component started
+[2022-03-09T11:21:04,378][INFO ][o.e.t.TransportService   ] [shubham-Latitude-3510] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2022-03-09T11:21:05,607][WARN ][o.e.b.BootstrapChecks    ] [shubham-Latitude-3510] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
+[2022-03-09T11:21:05,609][INFO ][o.e.c.c.Coordinator      ] [shubham-Latitude-3510] cluster UUID [6sJWKJiCTRSRxoJIyomgJA]
+[2022-03-09T11:21:05,951][INFO ][o.e.c.s.MasterService    ] [shubham-Latitude-3510] elected-as-master ([1] nodes joined)[{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{3lYosjatQvS8JsXlos84mw}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 9, version: 125, delta: master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{3lYosjatQvS8JsXlos84mw}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}
+[2022-03-09T11:21:06,306][INFO ][o.e.c.s.ClusterApplierService] [shubham-Latitude-3510] master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{3lYosjatQvS8JsXlos84mw}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}, term: 9, version: 125, reason: Publication{term=9, version=125}
+[2022-03-09T11:21:06,797][INFO ][o.e.h.AbstractHttpServerTransport] [shubham-Latitude-3510] publish_address {192.168.1.13:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}, {192.168.1.13:9200}
+[2022-03-09T11:21:06,797][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] started
+[2022-03-09T11:21:06,853][INFO ][o.e.l.LicenseService     ] [shubham-Latitude-3510] license [13edf9a5-d004-4836-88bb-f51e05878d16] mode [basic] - valid
+[2022-03-09T11:21:06,854][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [basic], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T11:21:06,949][INFO ][o.e.g.GatewayService     ] [shubham-Latitude-3510] recovered [2] indices into cluster_state
+[2022-03-09T11:21:10,125][INFO ][o.e.c.r.a.AllocationService] [shubham-Latitude-3510] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[.geoip_databases][0]]])." previous.health="RED" reason="shards started [[.geoip_databases][0]]"
+[2022-03-09T11:21:11,137][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-Country.mmdb]
+[2022-03-09T11:21:11,137][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-ASN.mmdb]
+[2022-03-09T11:21:12,641][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-City.mmdb]
+[2022-03-09T11:21:19,935][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52702}
+[2022-03-09T11:21:19,935][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52704}
+[2022-03-09T11:21:24,895][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52710}
+[2022-03-09T11:21:24,895][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52712}
+[2022-03-09T11:21:30,677][INFO ][o.e.i.g.GeoIpDownloader  ] [shubham-Latitude-3510] successfully downloaded geoip database [GeoLite2-ASN.mmdb]
+[2022-03-09T11:21:30,804][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-11240728913019107622/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-ASN.mmdb]
+[2022-03-09T11:21:30,804][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-ASN.mmdb]
+[2022-03-09T11:21:43,999][INFO ][o.e.i.g.GeoIpDownloader  ] [shubham-Latitude-3510] successfully downloaded geoip database [GeoLite2-City.mmdb]
+[2022-03-09T11:21:46,447][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-11240728913019107622/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-City.mmdb]
+[2022-03-09T11:21:46,448][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-City.mmdb]
+[2022-03-09T11:21:48,888][INFO ][o.e.i.g.GeoIpDownloader  ] [shubham-Latitude-3510] successfully downloaded geoip database [GeoLite2-Country.mmdb]
+[2022-03-09T11:21:49,196][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-11240728913019107622/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-Country.mmdb]
+[2022-03-09T11:21:49,197][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-Country.mmdb]
+[2022-03-09T11:22:01,384][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52718}
+[2022-03-09T11:23:48,326][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52764}
+[2022-03-09T11:23:48,321][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52760}
+[2022-03-09T11:23:48,324][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52762}
+[2022-03-09T11:23:49,425][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52766}
+[2022-03-09T11:23:49,427][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52768}
+[2022-03-09T11:23:49,431][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52770}
+[2022-03-09T11:23:54,561][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52772}
+[2022-03-09T11:23:54,562][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52774}
+[2022-03-09T11:23:54,566][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52776}
+[2022-03-09T11:24:02,643][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52778}
+[2022-03-09T11:24:02,643][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52780}
+[2022-03-09T11:24:02,646][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52782}
+[2022-03-09T11:24:03,670][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52784}
+[2022-03-09T11:24:03,671][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52786}
+[2022-03-09T11:24:03,674][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52788}
+[2022-03-09T11:24:05,141][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52790}
+[2022-03-09T11:24:05,142][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52792}
+[2022-03-09T11:24:05,145][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52794}
+[2022-03-09T11:24:10,179][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52796}
+[2022-03-09T11:24:10,180][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52798}
+[2022-03-09T11:24:10,182][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52800}
+[2022-03-09T11:24:10,548][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52802}
+[2022-03-09T11:25:15,015][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52816}
+[2022-03-09T11:25:44,708][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52828}
+[2022-03-09T11:27:40,486][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52836}
+[2022-03-09T11:27:44,073][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52840}
+[2022-03-09T11:27:45,094][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52844}
+[2022-03-09T11:28:19,489][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:52852}
+[2022-03-09T11:43:31,953][INFO ][o.e.x.m.p.NativeController] [shubham-Latitude-3510] Native controller process has stopped - no new native processes can be started
+[2022-03-09T11:43:32,586][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopping ...
+[2022-03-09T11:43:32,835][INFO ][o.e.x.w.WatcherService   ] [shubham-Latitude-3510] stopping watch service, reason [shutdown initiated]
+[2022-03-09T11:43:32,837][INFO ][o.e.x.w.WatcherLifeCycleService] [shubham-Latitude-3510] watcher has stopped and shutdown
+[2022-03-09T11:43:33,913][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopped
+[2022-03-09T11:43:33,913][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closing ...
+[2022-03-09T11:43:33,987][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-11240728913019107622/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-Country.mmdb]
+[2022-03-09T11:43:33,988][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-11240728913019107622/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-ASN.mmdb]
+[2022-03-09T11:43:33,989][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-11240728913019107622/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-City.mmdb]
+[2022-03-09T11:43:33,993][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closed
+[2022-03-09T12:16:37,625][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] version[8.0.0], pid[30530], build[default/tar/1b6a7ece17463df5ff54a3e1302d825889aa1161/2022-02-03T16:47:57.507843096Z], OS[Linux/5.4.0-100-generic/amd64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.1/17.0.1+12]
+[2022-03-09T12:16:37,630][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM home [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/jdk], using bundled JDK [true]
+[2022-03-09T12:16:37,631][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=ALL-UNNAMED, -XX:+UseG1GC, -Djava.io.tmpdir=/tmp/elasticsearch-5010525616118961570, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Xms7884m, -Xmx7884m, -XX:MaxDirectMemorySize=4133486592, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.path.home=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0, -Des.path.conf=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+[2022-03-09T12:16:41,687][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2022-03-09T12:16:41,688][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2022-03-09T12:16:41,689][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2022-03-09T12:16:43,753][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [aggs-matrix-stats]
+[2022-03-09T12:16:43,753][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [analysis-common]
+[2022-03-09T12:16:43,754][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [constant-keyword]
+[2022-03-09T12:16:43,754][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [frozen-indices]
+[2022-03-09T12:16:43,754][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-common]
+[2022-03-09T12:16:43,755][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-geoip]
+[2022-03-09T12:16:43,755][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-user-agent]
+[2022-03-09T12:16:43,755][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [kibana]
+[2022-03-09T12:16:43,756][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-expression]
+[2022-03-09T12:16:43,756][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-mustache]
+[2022-03-09T12:16:43,756][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-painless]
+[2022-03-09T12:16:43,756][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [legacy-geo]
+[2022-03-09T12:16:43,757][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-extras]
+[2022-03-09T12:16:43,757][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-version]
+[2022-03-09T12:16:43,757][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [parent-join]
+[2022-03-09T12:16:43,758][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [percolator]
+[2022-03-09T12:16:43,758][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [rank-eval]
+[2022-03-09T12:16:43,758][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [reindex]
+[2022-03-09T12:16:43,759][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repositories-metering-api]
+[2022-03-09T12:16:43,759][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-azure]
+[2022-03-09T12:16:43,759][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-encrypted]
+[2022-03-09T12:16:43,759][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-gcs]
+[2022-03-09T12:16:43,760][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-s3]
+[2022-03-09T12:16:43,760][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-url]
+[2022-03-09T12:16:43,760][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [runtime-fields-common]
+[2022-03-09T12:16:43,760][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [search-business-rules]
+[2022-03-09T12:16:43,761][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [searchable-snapshots]
+[2022-03-09T12:16:43,761][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-based-recoveries]
+[2022-03-09T12:16:43,761][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-repo-test-kit]
+[2022-03-09T12:16:43,761][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [spatial]
+[2022-03-09T12:16:43,762][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transform]
+[2022-03-09T12:16:43,762][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transport-netty4]
+[2022-03-09T12:16:43,762][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [unsigned-long]
+[2022-03-09T12:16:43,762][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vector-tile]
+[2022-03-09T12:16:43,763][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vectors]
+[2022-03-09T12:16:43,763][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [wildcard]
+[2022-03-09T12:16:43,763][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-aggregate-metric]
+[2022-03-09T12:16:43,763][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-analytics]
+[2022-03-09T12:16:43,764][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async]
+[2022-03-09T12:16:43,764][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async-search]
+[2022-03-09T12:16:43,764][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-autoscaling]
+[2022-03-09T12:16:43,764][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ccr]
+[2022-03-09T12:16:43,765][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-core]
+[2022-03-09T12:16:43,765][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-data-streams]
+[2022-03-09T12:16:43,765][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-deprecation]
+[2022-03-09T12:16:43,765][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-enrich]
+[2022-03-09T12:16:43,766][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-eql]
+[2022-03-09T12:16:43,766][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-fleet]
+[2022-03-09T12:16:43,766][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-graph]
+[2022-03-09T12:16:43,766][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-identity-provider]
+[2022-03-09T12:16:43,766][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ilm]
+[2022-03-09T12:16:43,767][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-logstash]
+[2022-03-09T12:16:43,767][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ml]
+[2022-03-09T12:16:43,767][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-monitoring]
+[2022-03-09T12:16:43,767][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ql]
+[2022-03-09T12:16:43,768][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-rollup]
+[2022-03-09T12:16:43,769][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-security]
+[2022-03-09T12:16:43,769][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-shutdown]
+[2022-03-09T12:16:43,769][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-sql]
+[2022-03-09T12:16:43,770][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-stack]
+[2022-03-09T12:16:43,770][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-text-structure]
+[2022-03-09T12:16:43,770][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-voting-only-node]
+[2022-03-09T12:16:43,771][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-watcher]
+[2022-03-09T12:16:43,772][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] no plugins loaded
+[2022-03-09T12:16:43,931][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] using [1] data paths, mounts [[/ (/dev/sda3)]], net usable_space [812.2gb], net total_space [910.1gb], types [ext4]
+[2022-03-09T12:16:43,931][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] heap size [7.6gb], compressed ordinary object pointers [true]
+[2022-03-09T12:16:44,148][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] node name [shubham-Latitude-3510], node ID [utM-qrtjTjmVzm0EHjihQg], cluster name [fundoonotes], roles [data_cold, data, remote_cluster_client, master, data_warm, data_content, transform, data_hot, ml, data_frozen, ingest]
+[2022-03-09T12:16:50,070][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [shubham-Latitude-3510] [controller/30835] [Main.cc@123] controller (64 bit): Version 8.0.0 (Build 5e85495ea85316) Copyright (c) 2022 Elasticsearch BV
+[2022-03-09T12:16:50,391][INFO ][o.e.x.s.Security         ] [shubham-Latitude-3510] Security is enabled
+[2022-03-09T12:16:50,684][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [trial], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T12:16:50,690][INFO ][o.e.x.s.a.s.FileRolesStore] [shubham-Latitude-3510] parsed [0] roles from file [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config/roles.yml]
+[2022-03-09T12:16:52,521][INFO ][o.e.t.n.NettyAllocator   ] [shubham-Latitude-3510] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2022-03-09T12:16:52,592][INFO ][o.e.d.DiscoveryModule    ] [shubham-Latitude-3510] using discovery type [zen] and seed hosts providers [settings]
+[2022-03-09T12:16:53,716][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] initialized
+[2022-03-09T12:16:53,717][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] starting ...
+[2022-03-09T12:16:53,810][INFO ][o.e.x.s.c.f.PersistentCache] [shubham-Latitude-3510] persistent cache index loaded
+[2022-03-09T12:16:53,813][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [shubham-Latitude-3510] deprecation component started
+[2022-03-09T12:16:54,070][INFO ][o.e.t.TransportService   ] [shubham-Latitude-3510] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2022-03-09T12:16:54,704][WARN ][o.e.b.BootstrapChecks    ] [shubham-Latitude-3510] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
+[2022-03-09T12:16:54,706][INFO ][o.e.c.c.Coordinator      ] [shubham-Latitude-3510] cluster UUID [6sJWKJiCTRSRxoJIyomgJA]
+[2022-03-09T12:16:55,098][INFO ][o.e.c.s.MasterService    ] [shubham-Latitude-3510] elected-as-master ([1] nodes joined)[{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{-ex5bo-JRUWMhPgFCD-XZQ}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 10, version: 135, delta: master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{-ex5bo-JRUWMhPgFCD-XZQ}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}
+[2022-03-09T12:16:55,293][INFO ][o.e.c.s.ClusterApplierService] [shubham-Latitude-3510] master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{-ex5bo-JRUWMhPgFCD-XZQ}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}, term: 10, version: 135, reason: Publication{term=10, version=135}
+[2022-03-09T12:16:55,741][INFO ][o.e.h.AbstractHttpServerTransport] [shubham-Latitude-3510] publish_address {192.168.1.13:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}, {192.168.1.13:9200}
+[2022-03-09T12:16:55,742][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] started
+[2022-03-09T12:16:55,781][INFO ][o.e.l.LicenseService     ] [shubham-Latitude-3510] license [13edf9a5-d004-4836-88bb-f51e05878d16] mode [basic] - valid
+[2022-03-09T12:16:55,782][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [basic], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T12:16:55,790][INFO ][o.e.g.GatewayService     ] [shubham-Latitude-3510] recovered [2] indices into cluster_state
+[2022-03-09T12:16:58,041][INFO ][o.e.c.r.a.AllocationService] [shubham-Latitude-3510] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[.geoip_databases][0]]])." previous.health="RED" reason="shards started [[.geoip_databases][0]]"
+[2022-03-09T12:16:58,758][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-Country.mmdb]
+[2022-03-09T12:16:58,758][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-ASN.mmdb]
+[2022-03-09T12:16:59,938][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-City.mmdb]
+[2022-03-09T12:17:15,215][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54558}
+[2022-03-09T12:17:15,215][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54556}
+[2022-03-09T12:17:35,336][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54570}
+[2022-03-09T12:18:03,991][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54608}
+[2022-03-09T12:18:05,520][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54610}
+[2022-03-09T12:18:09,500][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54612}
+[2022-03-09T12:18:20,816][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54614}
+[2022-03-09T12:18:23,607][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54616}
+[2022-03-09T12:18:27,848][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54618}
+[2022-03-09T12:19:23,631][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:52396}
+[2022-03-09T12:20:04,922][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54634}
+[2022-03-09T12:20:10,123][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54636}
+[2022-03-09T12:20:20,728][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54638}
+[2022-03-09T12:20:24,932][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54640}
+[2022-03-09T12:21:00,624][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54728}
+[2022-03-09T12:21:02,960][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54730}
+[2022-03-09T12:21:41,902][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:52554}
+[2022-03-09T12:35:12,266][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54882}
+[2022-03-09T12:35:12,266][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:54884}
+[2022-03-09T12:35:37,043][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:52702}
+[2022-03-09T12:38:42,405][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:52756}
+[2022-03-09T12:42:24,182][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:52842}
+[2022-03-09T12:43:28,606][INFO ][o.e.x.m.p.NativeController] [shubham-Latitude-3510] Native controller process has stopped - no new native processes can be started
+[2022-03-09T12:43:28,881][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopping ...
+[2022-03-09T12:43:29,088][INFO ][o.e.x.w.WatcherService   ] [shubham-Latitude-3510] stopping watch service, reason [shutdown initiated]
+[2022-03-09T12:43:29,092][INFO ][o.e.x.w.WatcherLifeCycleService] [shubham-Latitude-3510] watcher has stopped and shutdown
+[2022-03-09T12:43:29,781][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopped
+[2022-03-09T12:43:29,781][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closing ...
+[2022-03-09T12:43:29,857][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-5010525616118961570/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-Country.mmdb]
+[2022-03-09T12:43:29,857][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-5010525616118961570/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-ASN.mmdb]
+[2022-03-09T12:43:29,858][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-5010525616118961570/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-City.mmdb]
+[2022-03-09T12:43:29,859][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closed
+[2022-03-09T12:49:04,984][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] version[8.0.0], pid[5618], build[default/tar/1b6a7ece17463df5ff54a3e1302d825889aa1161/2022-02-03T16:47:57.507843096Z], OS[Linux/5.4.0-100-generic/amd64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.1/17.0.1+12]
+[2022-03-09T12:49:05,135][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM home [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/jdk], using bundled JDK [true]
+[2022-03-09T12:49:05,137][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=ALL-UNNAMED, -XX:+UseG1GC, -Djava.io.tmpdir=/tmp/elasticsearch-17322163604944988113, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Xms7884m, -Xmx7884m, -XX:MaxDirectMemorySize=4133486592, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.path.home=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0, -Des.path.conf=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+[2022-03-09T12:49:11,542][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2022-03-09T12:49:11,543][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2022-03-09T12:49:11,544][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2022-03-09T12:49:15,137][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [aggs-matrix-stats]
+[2022-03-09T12:49:15,138][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [analysis-common]
+[2022-03-09T12:49:15,139][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [constant-keyword]
+[2022-03-09T12:49:15,141][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [frozen-indices]
+[2022-03-09T12:49:15,142][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-common]
+[2022-03-09T12:49:15,143][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-geoip]
+[2022-03-09T12:49:15,143][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-user-agent]
+[2022-03-09T12:49:15,143][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [kibana]
+[2022-03-09T12:49:15,144][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-expression]
+[2022-03-09T12:49:15,144][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-mustache]
+[2022-03-09T12:49:15,145][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-painless]
+[2022-03-09T12:49:15,145][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [legacy-geo]
+[2022-03-09T12:49:15,146][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-extras]
+[2022-03-09T12:49:15,146][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-version]
+[2022-03-09T12:49:15,146][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [parent-join]
+[2022-03-09T12:49:15,147][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [percolator]
+[2022-03-09T12:49:15,147][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [rank-eval]
+[2022-03-09T12:49:15,147][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [reindex]
+[2022-03-09T12:49:15,148][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repositories-metering-api]
+[2022-03-09T12:49:15,148][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-azure]
+[2022-03-09T12:49:15,148][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-encrypted]
+[2022-03-09T12:49:15,149][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-gcs]
+[2022-03-09T12:49:15,150][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-s3]
+[2022-03-09T12:49:15,152][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-url]
+[2022-03-09T12:49:15,153][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [runtime-fields-common]
+[2022-03-09T12:49:15,154][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [search-business-rules]
+[2022-03-09T12:49:15,154][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [searchable-snapshots]
+[2022-03-09T12:49:15,155][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-based-recoveries]
+[2022-03-09T12:49:15,155][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-repo-test-kit]
+[2022-03-09T12:49:15,155][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [spatial]
+[2022-03-09T12:49:15,156][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transform]
+[2022-03-09T12:49:15,156][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transport-netty4]
+[2022-03-09T12:49:15,156][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [unsigned-long]
+[2022-03-09T12:49:15,157][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vector-tile]
+[2022-03-09T12:49:15,157][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vectors]
+[2022-03-09T12:49:15,157][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [wildcard]
+[2022-03-09T12:49:15,158][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-aggregate-metric]
+[2022-03-09T12:49:15,158][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-analytics]
+[2022-03-09T12:49:15,158][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async]
+[2022-03-09T12:49:15,159][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async-search]
+[2022-03-09T12:49:15,159][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-autoscaling]
+[2022-03-09T12:49:15,160][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ccr]
+[2022-03-09T12:49:15,160][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-core]
+[2022-03-09T12:49:15,160][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-data-streams]
+[2022-03-09T12:49:15,161][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-deprecation]
+[2022-03-09T12:49:15,161][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-enrich]
+[2022-03-09T12:49:15,161][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-eql]
+[2022-03-09T12:49:15,162][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-fleet]
+[2022-03-09T12:49:15,162][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-graph]
+[2022-03-09T12:49:15,162][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-identity-provider]
+[2022-03-09T12:49:15,162][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ilm]
+[2022-03-09T12:49:15,163][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-logstash]
+[2022-03-09T12:49:15,163][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ml]
+[2022-03-09T12:49:15,163][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-monitoring]
+[2022-03-09T12:49:15,164][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ql]
+[2022-03-09T12:49:15,166][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-rollup]
+[2022-03-09T12:49:15,167][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-security]
+[2022-03-09T12:49:15,168][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-shutdown]
+[2022-03-09T12:49:15,169][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-sql]
+[2022-03-09T12:49:15,169][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-stack]
+[2022-03-09T12:49:15,169][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-text-structure]
+[2022-03-09T12:49:15,170][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-voting-only-node]
+[2022-03-09T12:49:15,170][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-watcher]
+[2022-03-09T12:49:15,171][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] no plugins loaded
+[2022-03-09T12:49:15,371][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] using [1] data paths, mounts [[/ (/dev/sda3)]], net usable_space [812.5gb], net total_space [910.1gb], types [ext4]
+[2022-03-09T12:49:15,371][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] heap size [7.6gb], compressed ordinary object pointers [true]
+[2022-03-09T12:49:16,173][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] node name [shubham-Latitude-3510], node ID [utM-qrtjTjmVzm0EHjihQg], cluster name [fundoonotes], roles [data_frozen, ingest, data_cold, data, remote_cluster_client, master, data_warm, data_content, transform, data_hot, ml]
+[2022-03-09T12:49:31,692][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [shubham-Latitude-3510] [controller/6033] [Main.cc@123] controller (64 bit): Version 8.0.0 (Build 5e85495ea85316) Copyright (c) 2022 Elasticsearch BV
+[2022-03-09T12:49:32,374][INFO ][o.e.x.s.Security         ] [shubham-Latitude-3510] Security is enabled
+[2022-03-09T12:49:32,829][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [trial], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T12:49:32,892][INFO ][o.e.x.s.a.s.FileRolesStore] [shubham-Latitude-3510] parsed [0] roles from file [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config/roles.yml]
+[2022-03-09T12:49:37,551][INFO ][o.e.t.n.NettyAllocator   ] [shubham-Latitude-3510] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2022-03-09T12:49:37,793][INFO ][o.e.d.DiscoveryModule    ] [shubham-Latitude-3510] using discovery type [zen] and seed hosts providers [settings]
+[2022-03-09T12:49:40,294][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] initialized
+[2022-03-09T12:49:40,295][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] starting ...
+[2022-03-09T12:49:40,491][INFO ][o.e.x.s.c.f.PersistentCache] [shubham-Latitude-3510] persistent cache index loaded
+[2022-03-09T12:49:40,492][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [shubham-Latitude-3510] deprecation component started
+[2022-03-09T12:49:41,174][INFO ][o.e.t.TransportService   ] [shubham-Latitude-3510] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2022-03-09T12:49:42,534][WARN ][o.e.b.BootstrapChecks    ] [shubham-Latitude-3510] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
+[2022-03-09T12:49:42,536][INFO ][o.e.c.c.Coordinator      ] [shubham-Latitude-3510] cluster UUID [6sJWKJiCTRSRxoJIyomgJA]
+[2022-03-09T12:49:43,021][INFO ][o.e.c.s.MasterService    ] [shubham-Latitude-3510] elected-as-master ([1] nodes joined)[{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{aYUKueioT3uEACTt_SwpoQ}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 11, version: 145, delta: master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{aYUKueioT3uEACTt_SwpoQ}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}
+[2022-03-09T12:49:43,396][INFO ][o.e.c.s.ClusterApplierService] [shubham-Latitude-3510] master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{aYUKueioT3uEACTt_SwpoQ}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}, term: 11, version: 145, reason: Publication{term=11, version=145}
+[2022-03-09T12:49:43,881][INFO ][o.e.h.AbstractHttpServerTransport] [shubham-Latitude-3510] publish_address {192.168.1.13:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}, {192.168.1.13:9200}
+[2022-03-09T12:49:43,883][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] started
+[2022-03-09T12:49:44,180][INFO ][o.e.l.LicenseService     ] [shubham-Latitude-3510] license [13edf9a5-d004-4836-88bb-f51e05878d16] mode [basic] - valid
+[2022-03-09T12:49:44,183][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [basic], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T12:49:44,215][INFO ][o.e.g.GatewayService     ] [shubham-Latitude-3510] recovered [2] indices into cluster_state
+[2022-03-09T12:49:45,496][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:45868}
+[2022-03-09T12:49:45,498][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:45870}
+[2022-03-09T12:49:51,562][INFO ][o.e.c.r.a.AllocationService] [shubham-Latitude-3510] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[.geoip_databases][0]]])." previous.health="RED" reason="shards started [[.geoip_databases][0]]"
+[2022-03-09T12:49:53,944][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-Country.mmdb]
+[2022-03-09T12:49:53,944][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-ASN.mmdb]
+[2022-03-09T12:49:59,621][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-City.mmdb]
+[2022-03-09T12:50:16,630][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:45886}
+[2022-03-09T12:51:19,798][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:55870}
+[2022-03-09T12:53:51,364][WARN ][o.e.x.c.s.t.n.SecurityNetty4Transport] [shubham-Latitude-3510] received plaintext traffic on an encrypted channel, closing connection Netty4TcpChannel{localAddress=/127.0.0.1:9300, remoteAddress=/127.0.0.1:33402, profile=default}
+[2022-03-09T12:56:34,245][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56144}
+[2022-03-09T12:57:31,433][INFO ][o.e.x.m.p.NativeController] [shubham-Latitude-3510] Native controller process has stopped - no new native processes can be started
+[2022-03-09T12:57:31,434][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopping ...
+[2022-03-09T12:57:31,458][INFO ][o.e.x.w.WatcherService   ] [shubham-Latitude-3510] stopping watch service, reason [shutdown initiated]
+[2022-03-09T12:57:31,461][INFO ][o.e.x.w.WatcherLifeCycleService] [shubham-Latitude-3510] watcher has stopped and shutdown
+[2022-03-09T12:57:31,924][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopped
+[2022-03-09T12:57:31,925][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closing ...
+[2022-03-09T12:57:31,967][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-17322163604944988113/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-Country.mmdb]
+[2022-03-09T12:57:31,967][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-17322163604944988113/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-ASN.mmdb]
+[2022-03-09T12:57:31,968][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-17322163604944988113/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-City.mmdb]
+[2022-03-09T12:57:31,971][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closed
+[2022-03-09T12:57:50,822][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] version[8.0.0], pid[7832], build[default/tar/1b6a7ece17463df5ff54a3e1302d825889aa1161/2022-02-03T16:47:57.507843096Z], OS[Linux/5.4.0-100-generic/amd64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.1/17.0.1+12]
+[2022-03-09T12:57:50,830][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM home [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/jdk], using bundled JDK [true]
+[2022-03-09T12:57:50,831][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -Djava.security.manager=allow, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j2.formatMsgNoLookups=true, -Djava.locale.providers=SPI,COMPAT, --add-opens=java.base/java.io=ALL-UNNAMED, -XX:+UseG1GC, -Djava.io.tmpdir=/tmp/elasticsearch-5714222913995065896, -XX:+HeapDumpOnOutOfMemoryError, -XX:+ExitOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Xms7884m, -Xmx7884m, -XX:MaxDirectMemorySize=4133486592, -XX:G1HeapRegionSize=4m, -XX:InitiatingHeapOccupancyPercent=30, -XX:G1ReservePercent=15, -Des.path.home=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0, -Des.path.conf=/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config, -Des.distribution.flavor=default, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+[2022-03-09T12:57:54,978][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[2022-03-09T12:57:54,981][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[2022-03-09T12:57:54,983][WARN ][stderr                   ] [shubham-Latitude-3510] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[2022-03-09T12:57:57,867][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [aggs-matrix-stats]
+[2022-03-09T12:57:57,867][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [analysis-common]
+[2022-03-09T12:57:57,868][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [constant-keyword]
+[2022-03-09T12:57:57,868][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [frozen-indices]
+[2022-03-09T12:57:57,869][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-common]
+[2022-03-09T12:57:57,869][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-geoip]
+[2022-03-09T12:57:57,869][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [ingest-user-agent]
+[2022-03-09T12:57:57,870][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [kibana]
+[2022-03-09T12:57:57,870][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-expression]
+[2022-03-09T12:57:57,871][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-mustache]
+[2022-03-09T12:57:57,871][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [lang-painless]
+[2022-03-09T12:57:57,872][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [legacy-geo]
+[2022-03-09T12:57:57,872][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-extras]
+[2022-03-09T12:57:57,872][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [mapper-version]
+[2022-03-09T12:57:57,873][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [parent-join]
+[2022-03-09T12:57:57,873][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [percolator]
+[2022-03-09T12:57:57,873][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [rank-eval]
+[2022-03-09T12:57:57,874][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [reindex]
+[2022-03-09T12:57:57,874][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repositories-metering-api]
+[2022-03-09T12:57:57,874][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-azure]
+[2022-03-09T12:57:57,875][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-encrypted]
+[2022-03-09T12:57:57,875][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-gcs]
+[2022-03-09T12:57:57,876][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-s3]
+[2022-03-09T12:57:57,877][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [repository-url]
+[2022-03-09T12:57:57,877][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [runtime-fields-common]
+[2022-03-09T12:57:57,878][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [search-business-rules]
+[2022-03-09T12:57:57,878][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [searchable-snapshots]
+[2022-03-09T12:57:57,878][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-based-recoveries]
+[2022-03-09T12:57:57,879][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [snapshot-repo-test-kit]
+[2022-03-09T12:57:57,879][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [spatial]
+[2022-03-09T12:57:57,879][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transform]
+[2022-03-09T12:57:57,880][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [transport-netty4]
+[2022-03-09T12:57:57,880][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [unsigned-long]
+[2022-03-09T12:57:57,880][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vector-tile]
+[2022-03-09T12:57:57,881][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [vectors]
+[2022-03-09T12:57:57,881][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [wildcard]
+[2022-03-09T12:57:57,882][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-aggregate-metric]
+[2022-03-09T12:57:57,882][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-analytics]
+[2022-03-09T12:57:57,882][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async]
+[2022-03-09T12:57:57,882][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-async-search]
+[2022-03-09T12:57:57,883][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-autoscaling]
+[2022-03-09T12:57:57,883][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ccr]
+[2022-03-09T12:57:57,883][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-core]
+[2022-03-09T12:57:57,884][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-data-streams]
+[2022-03-09T12:57:57,884][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-deprecation]
+[2022-03-09T12:57:57,884][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-enrich]
+[2022-03-09T12:57:57,885][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-eql]
+[2022-03-09T12:57:57,885][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-fleet]
+[2022-03-09T12:57:57,885][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-graph]
+[2022-03-09T12:57:57,885][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-identity-provider]
+[2022-03-09T12:57:57,886][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ilm]
+[2022-03-09T12:57:57,886][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-logstash]
+[2022-03-09T12:57:57,886][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ml]
+[2022-03-09T12:57:57,887][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-monitoring]
+[2022-03-09T12:57:57,887][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-ql]
+[2022-03-09T12:57:57,887][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-rollup]
+[2022-03-09T12:57:57,887][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-security]
+[2022-03-09T12:57:57,888][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-shutdown]
+[2022-03-09T12:57:57,888][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-sql]
+[2022-03-09T12:57:57,888][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-stack]
+[2022-03-09T12:57:57,889][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-text-structure]
+[2022-03-09T12:57:57,889][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-voting-only-node]
+[2022-03-09T12:57:57,889][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] loaded module [x-pack-watcher]
+[2022-03-09T12:57:57,890][INFO ][o.e.p.PluginsService     ] [shubham-Latitude-3510] no plugins loaded
+[2022-03-09T12:57:57,978][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] using [1] data paths, mounts [[/ (/dev/sda3)]], net usable_space [812.4gb], net total_space [910.1gb], types [ext4]
+[2022-03-09T12:57:57,979][INFO ][o.e.e.NodeEnvironment    ] [shubham-Latitude-3510] heap size [7.6gb], compressed ordinary object pointers [true]
+[2022-03-09T12:57:58,169][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] node name [shubham-Latitude-3510], node ID [utM-qrtjTjmVzm0EHjihQg], cluster name [fundoonotes], roles [data_hot, ml, data_frozen, ingest, data_cold, data, remote_cluster_client, master, data_warm, data_content, transform]
+[2022-03-09T12:58:09,367][INFO ][o.e.x.m.p.l.CppLogMessageHandler] [shubham-Latitude-3510] [controller/8138] [Main.cc@123] controller (64 bit): Version 8.0.0 (Build 5e85495ea85316) Copyright (c) 2022 Elasticsearch BV
+[2022-03-09T12:58:10,011][INFO ][o.e.x.s.Security         ] [shubham-Latitude-3510] Security is enabled
+[2022-03-09T12:58:10,863][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [trial], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T12:58:10,887][INFO ][o.e.x.s.a.s.FileRolesStore] [shubham-Latitude-3510] parsed [0] roles from file [/home/shubham/Desktop/ElasticSearch/elasticsearch-8.0.0/config/roles.yml]
+[2022-03-09T12:58:15,036][INFO ][o.e.t.n.NettyAllocator   ] [shubham-Latitude-3510] creating NettyAllocator with the following configs: [name=elasticsearch_configured, chunk_size=1mb, suggested_max_allocation_size=1mb, factors={es.unsafe.use_netty_default_chunk_and_page_size=false, g1gc_enabled=true, g1gc_region_size=4mb}]
+[2022-03-09T12:58:15,213][INFO ][o.e.d.DiscoveryModule    ] [shubham-Latitude-3510] using discovery type [zen] and seed hosts providers [settings]
+[2022-03-09T12:58:17,193][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] initialized
+[2022-03-09T12:58:17,193][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] starting ...
+[2022-03-09T12:58:17,294][INFO ][o.e.x.s.c.f.PersistentCache] [shubham-Latitude-3510] persistent cache index loaded
+[2022-03-09T12:58:17,295][INFO ][o.e.x.d.l.DeprecationIndexingComponent] [shubham-Latitude-3510] deprecation component started
+[2022-03-09T12:58:17,700][INFO ][o.e.t.TransportService   ] [shubham-Latitude-3510] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2022-03-09T12:58:18,951][WARN ][o.e.b.BootstrapChecks    ] [shubham-Latitude-3510] max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
+[2022-03-09T12:58:18,954][INFO ][o.e.c.c.Coordinator      ] [shubham-Latitude-3510] cluster UUID [6sJWKJiCTRSRxoJIyomgJA]
+[2022-03-09T12:58:19,240][INFO ][o.e.c.s.MasterService    ] [shubham-Latitude-3510] elected-as-master ([1] nodes joined)[{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{X3eqqZjERfu_MRrOGkZ1dA}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 12, version: 155, delta: master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{X3eqqZjERfu_MRrOGkZ1dA}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}
+[2022-03-09T12:58:19,549][INFO ][o.e.c.s.ClusterApplierService] [shubham-Latitude-3510] master node changed {previous [], current [{shubham-Latitude-3510}{utM-qrtjTjmVzm0EHjihQg}{X3eqqZjERfu_MRrOGkZ1dA}{127.0.0.1}{127.0.0.1:9300}{cdfhilmrstw}]}, term: 12, version: 155, reason: Publication{term=12, version=155}
+[2022-03-09T12:58:19,761][INFO ][o.e.h.AbstractHttpServerTransport] [shubham-Latitude-3510] publish_address {192.168.1.13:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}, {192.168.1.13:9200}
+[2022-03-09T12:58:19,764][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] started
+[2022-03-09T12:58:20,086][INFO ][o.e.l.LicenseService     ] [shubham-Latitude-3510] license [13edf9a5-d004-4836-88bb-f51e05878d16] mode [basic] - valid
+[2022-03-09T12:58:20,088][INFO ][o.e.x.s.a.Realms         ] [shubham-Latitude-3510] license mode is [basic], currently licensed security realms are [reserved/reserved,file/default_file,native/default_native]
+[2022-03-09T12:58:20,103][INFO ][o.e.g.GatewayService     ] [shubham-Latitude-3510] recovered [2] indices into cluster_state
+[2022-03-09T12:58:22,114][INFO ][o.e.c.r.a.AllocationService] [shubham-Latitude-3510] current.health="GREEN" message="Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[.geoip_databases][0]]])." previous.health="RED" reason="shards started [[.geoip_databases][0]]"
+[2022-03-09T12:58:22,913][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-Country.mmdb]
+[2022-03-09T12:58:22,937][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-ASN.mmdb]
+[2022-03-09T12:58:24,448][INFO ][o.e.i.g.DatabaseNodeService] [shubham-Latitude-3510] successfully loaded geoip database file [GeoLite2-City.mmdb]
+[2022-03-09T12:58:25,802][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:46238}
+[2022-03-09T12:58:25,802][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:46236}
+[2022-03-09T12:58:56,577][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56262}
+[2022-03-09T13:04:27,060][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56398}
+[2022-03-09T13:05:40,745][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56452}
+[2022-03-09T13:07:18,463][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56502}
+[2022-03-09T13:08:22,513][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56550}
+[2022-03-09T13:13:14,481][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:56818}
+[2022-03-09T13:20:27,359][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:57310}
+[2022-03-09T13:20:42,504][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47362}
+[2022-03-09T13:20:42,521][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47364}
+[2022-03-09T13:20:43,891][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47368}
+[2022-03-09T13:20:45,612][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47370}
+[2022-03-09T13:20:46,106][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47372}
+[2022-03-09T13:20:46,276][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47374}
+[2022-03-09T13:20:46,425][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47376}
+[2022-03-09T13:20:46,583][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47378}
+[2022-03-09T13:20:46,747][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47380}
+[2022-03-09T13:20:46,896][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47382}
+[2022-03-09T13:20:47,067][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47384}
+[2022-03-09T13:20:47,160][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47386}
+[2022-03-09T13:20:47,406][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47388}
+[2022-03-09T13:20:47,572][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47390}
+[2022-03-09T13:20:47,741][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47392}
+[2022-03-09T13:20:47,828][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47394}
+[2022-03-09T13:20:56,022][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47406}
+[2022-03-09T13:20:56,301][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47408}
+[2022-03-09T13:20:56,507][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47410}
+[2022-03-09T13:20:56,653][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47412}
+[2022-03-09T13:20:56,900][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47414}
+[2022-03-09T13:22:20,045][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47442}
+[2022-03-09T13:23:05,074][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47446}
+[2022-03-09T13:23:05,596][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] http client did not trust this server's certificate, closing connection Netty4HttpChannel{localAddress=/[0:0:0:0:0:0:0:1]:9200, remoteAddress=/[0:0:0:0:0:0:0:1]:47448}
+[2022-03-09T13:30:06,309][WARN ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [shubham-Latitude-3510] received plaintext http traffic on an https channel, closing connection Netty4HttpChannel{localAddress=/127.0.0.1:9200, remoteAddress=/127.0.0.1:57654}
+[2022-03-09T13:35:24,881][INFO ][o.e.x.m.p.NativeController] [shubham-Latitude-3510] Native controller process has stopped - no new native processes can be started
+[2022-03-09T13:35:24,883][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopping ...
+[2022-03-09T13:35:24,889][INFO ][o.e.x.w.WatcherService   ] [shubham-Latitude-3510] stopping watch service, reason [shutdown initiated]
+[2022-03-09T13:35:24,891][INFO ][o.e.x.w.WatcherLifeCycleService] [shubham-Latitude-3510] watcher has stopped and shutdown
+[2022-03-09T13:35:25,217][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] stopped
+[2022-03-09T13:35:25,217][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closing ...
+[2022-03-09T13:35:25,224][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-5714222913995065896/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-Country.mmdb]
+[2022-03-09T13:35:25,224][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-5714222913995065896/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-ASN.mmdb]
+[2022-03-09T13:35:25,224][INFO ][o.e.i.g.DatabaseReaderLazyLoader] [shubham-Latitude-3510] evicted [0] entries from cache after reloading database [/tmp/elasticsearch-5714222913995065896/geoip-databases/utM-qrtjTjmVzm0EHjihQg/GeoLite2-City.mmdb]
+[2022-03-09T13:35:25,225][INFO ][o.e.n.Node               ] [shubham-Latitude-3510] closed

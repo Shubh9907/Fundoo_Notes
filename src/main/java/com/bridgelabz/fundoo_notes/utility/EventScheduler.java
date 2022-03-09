@@ -18,5 +18,11 @@ public class EventScheduler {
 		iNoteService.deleteTrashedNote();
 		System.out.println("Cron Job Works");
 	}
+	
+//	@Scheduled(fixedRate = 1000*10)
+	public void sendReminderNoteEmail() {
+		iNoteService.sendReminderEmail();
+		System.out.println("Cron Job Works");
+	}
 
 }

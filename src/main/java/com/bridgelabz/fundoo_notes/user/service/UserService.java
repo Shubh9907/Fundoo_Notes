@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo_notes.user.service;
 
+import com.bridgelabz.fundoo_notes.configuration.RabbitConfiguration;
 import com.bridgelabz.fundoo_notes.entity.User;
 import com.bridgelabz.fundoo_notes.user.dto.LoginDto;
 import com.bridgelabz.fundoo_notes.user.dto.PasswordDto;
@@ -12,6 +13,7 @@ import com.bridgelabz.fundoo_notes.utility.PasswordEncoder;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -46,6 +48,9 @@ public class UserService implements IService {
     @Autowired
     ApiResponse apiResponse;
     
+    @Autowired
+    RabbitTemplate template;
+    
     ApiResponse userNotFound = new ApiResponse("User Not Found", 601, null);
 
     @Override
@@ -61,8 +66,7 @@ public class UserService implements IService {
 
         }
         userRepository.save(user);
-        String msg = mailService.sendMail(userDto.getEmail());
-        
+        template.convertAndSend(RabbitConfiguration.EXCHANGE, RabbitConfiguration.ROUTING_KEY1, userDto.getEmail());        
     	apiResponse = new ApiResponse(environment.getProperty("user.successfullyRegistered"), 2, null);
     	
     	return apiResponse;
@@ -140,8 +144,7 @@ public class UserService implements IService {
     public ApiResponse forgetPassword(String email) {
         User registeredUser = userRepository.findByEmail(email).orElseThrow(()-> new UserException());
         if (registeredUser != null) {
-            mailService.throughForget = true;
-            String msg = mailService.sendMail(email);
+            template.convertAndSend(RabbitConfiguration.EXCHANGE, RabbitConfiguration.ROUTING_KEY2, email);        
             
         	apiResponse = new ApiResponse(environment.getProperty("emailSent"), 1, null);
     	
