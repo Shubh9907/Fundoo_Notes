@@ -12,7 +12,7 @@ public class ElasticConfiguration {
 	@Bean
 	public RestHighLevelClient client() {
 		RestHighLevelClient client = new RestHighLevelClient(RestClient.builder(
-				new HttpHost("localhost", Integer.valueOf(9200) , "http")));	
+				new HttpHost("localhost", 9200 , "http")));	
 		return client;
 	}
 }

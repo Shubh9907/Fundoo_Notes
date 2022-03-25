@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo_notes.note.service;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
 import com.bridgelabz.fundoo_notes.note.dto.NoteDto;
@@ -15,17 +16,13 @@ public interface INoteService {
 
 	public ApiResponse deleteNote(Integer id, String token) ;
 
-	public ApiResponse trashNote(Integer id, String token);
+	public ApiResponse trashAndRestoreNote(Integer id, String token);
 
-	public ApiResponse archieveNote(Integer id, String token);
+	public ApiResponse archieveAndUnarchiveNote(Integer id, String token);
 	
 	public void deleteTrashedNote();
 
-	public ApiResponse searchNoteByTitle(String title);
-
-	public ApiResponse unarchieveNote(Integer id, String token);
-
-	public ApiResponse restoreNote(Integer id, String token);
+	public ApiResponse searchNoteByKeyword(String key, String token) throws IllegalArgumentException, UnsupportedEncodingException;
 
 	public ApiResponse remindNote(Integer id, String token, Date date);
 

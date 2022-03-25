@@ -27,6 +27,9 @@ public class MailService {
 	final String host = "smtp.gmail.com";
 	final String sender = System.getenv("MY_USERNAME");
 	final String pass = System.getenv("MY_PASSWORD");
+	final String SUBJECT_VERIFY = "Fundoo Email verification link";
+	final String SUBJECT_RESET = "Fundoo Password Reset Link";
+
 
 	Properties props = new Properties();
 
@@ -39,16 +42,20 @@ public class MailService {
 	@RabbitListener(queues = RabbitConfiguration.VERIFY_EMAIL_QUEUE)
 	public void commingEmailVerifyReq(String email) {
 		System.out.println(email);
-		sendVerificationMail(email);
+		String token = jwtToken.generateToken(email);
+		String content = "Click on the below link to verify your email id http://localhost:8080/api/verifyUser/";
+		sendMail(email,token, SUBJECT_VERIFY, content);
 	}
 
 	@RabbitListener(queues = RabbitConfiguration.PASSWORD_RESET_QUEUE)
 	public void commingPasswordResetReq(String email) {
 		System.out.println(email);
-		sendPasswordResetMail(email);
+		String token = jwtToken.generateToken(email);
+		String content = "Click on the link and use token given below to reset your password http://localhost:4200/resetpass/";
+		sendMail(email,token, SUBJECT_RESET, content);
 	}
 
-	public String sendVerificationMail(String email) {
+	public String sendMail(String email, String token, String subject , String content) {
 
 		props.put("mail.smtp.host", host);
 		props.put("mail.smtp.port", "587");
@@ -56,8 +63,6 @@ public class MailService {
 		props.put("mail.smtp.starttls.enable", "true");
 		props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 		props.put("mail.smtp.ssl.protocols", "TLSv1.2");
-
-		String token = jwtToken.generateToken(email);
 
 		Session session = Session.getDefaultInstance(props, new Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
@@ -68,9 +73,9 @@ public class MailService {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress(sender));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-			message.setSubject("Fundoo Email verification link");
+			message.setSubject(subject);
 			message.setText(
-					"Click on the below link to verify your email id http://localhost:8080/api/verifyUser/" + token);
+					content + token);
 			Transport.send(message);
 			return environment.getProperty("emailSent");
 		} catch (MessagingException e) {
@@ -79,37 +84,6 @@ public class MailService {
 		}
 	}
 
-	public String sendPasswordResetMail(String email) {
-
-		props.put("mail.smtp.host", host);
-		props.put("mail.smtp.port", "587");
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-		props.put("mail.smtp.ssl.protocols", "TLSv1.2");
-
-		String token = jwtToken.generateToken(email);
-
-		Session session = Session.getDefaultInstance(props, new Authenticator() {
-			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(sender, pass);
-			}
-		});
-		try {
-			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress(sender));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-			message.setSubject("Fundoo Password Reset Link");
-			message.setText(
-					"Click on the link and use token given below to reset your password http://localhost:8080/swagger-ui.html#!/controller/changePasswordUsingPUT \n Your password reset Token is:- "
-							+ token);
-			Transport.send(message);
-			return environment.getProperty("emailSent");
-		} catch (MessagingException e) {
-			e.printStackTrace();
-			return "Some Error occurred";
-		}
-	}
 	
 	public String sendNoteReminderMail(String email , Note note) {
 

@@ -144,6 +144,7 @@ public class UserService implements IService {
     public ApiResponse forgetPassword(String email) {
         User registeredUser = userRepository.findByEmail(email).orElseThrow(()-> new UserException());
         if (registeredUser != null) {
+        			
             template.convertAndSend(RabbitConfiguration.EXCHANGE, RabbitConfiguration.ROUTING_KEY2, email);        
             
         	apiResponse = new ApiResponse(environment.getProperty("emailSent"), 1, null);

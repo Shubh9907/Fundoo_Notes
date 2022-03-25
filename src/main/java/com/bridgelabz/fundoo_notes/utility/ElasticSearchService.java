@@ -78,12 +78,14 @@ public class ElasticSearchService {
 	}
 	
 	public void deleteNote(int noteId) {
+		@SuppressWarnings("unchecked")
 		DeleteRequest deleteRequest = new DeleteRequest(INDEX , TYPE, String.valueOf(noteId));		
 		try {
 			client.delete(deleteRequest, RequestOptions.DEFAULT);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return;
 	}
 	
 	public List<Note> searchData() {
@@ -119,8 +121,8 @@ public class ElasticSearchService {
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
 		QueryBuilder queryBuilder = QueryBuilders.boolQuery()
 											.must(QueryBuilders.queryStringQuery("*" +query+ "*")
-													.analyzeWildcard(true).field("title").field("noteBody"))
-											.filter(QueryBuilders.termsQuery("email", String.valueOf(email)));
+													.analyzeWildcard(true).field("title",2.0f).field("noteBody").field("title"));
+//											.filter(QueryBuilders.termsQuery("email", String.valueOf(email)));
 				
 		searchSourceBuilder.query(queryBuilder);
 		searchRequest.source(searchSourceBuilder);

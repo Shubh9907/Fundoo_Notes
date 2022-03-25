@@ -1,5 +1,6 @@
 package com.bridgelabz.fundoo_notes.note.service;
 
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -51,8 +52,7 @@ public class NoteService implements INoteService {
 
 	@Autowired
 	MailService mailService;
-	
-	
+
 	@Autowired
 	private ElasticSearchService elasticService;
 
@@ -72,9 +72,9 @@ public class NoteService implements INoteService {
 
 		Note savedNote = noteRepo.save(note);
 //		savedNote.setUser(null);	
-		
+
 //		System.out.println(savedNote);
-		
+
 		elasticService.createNote(savedNote);
 		apiResponse = new ApiResponse(environment.getProperty("note.addedSuccessfully"), 1, null);
 
@@ -84,6 +84,8 @@ public class NoteService implements INoteService {
 	@Override
 	public ApiResponse getNotes() {
 		apiResponse = new ApiResponse("Note List", 1, noteRepo.findAll());
+//		List<Note> noteList = elasticService.searchData();
+//		apiResponse = new ApiResponse("Note List", 1, noteList);
 		return apiResponse;
 	}
 
@@ -97,7 +99,16 @@ public class NoteService implements INoteService {
 			if (noteDto.getNoteBody() != null) {
 				note.setNoteBody(noteDto.getNoteBody());
 			}
-			noteRepo.save(note);
+			note.setInTrash(noteDto.isInTrash());
+			note.setInArchieve(noteDto.isInArchieve());
+			note.setNoteColor(noteDto.getNoteColor());
+			note.setReminder(noteDto.getReminder());
+			note.setPined(noteDto.isPined());
+			
+
+			Note savedNote = noteRepo.save(note);
+
+			elasticService.updateNote(savedNote);
 
 			apiResponse = new ApiResponse(environment.getProperty("note.updateSuccessfully"), 1, null);
 
@@ -118,36 +129,60 @@ public class NoteService implements INoteService {
 		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserException());
 		if (note != null && user != null) {
 			noteRepo.deleteById(id);
+			elasticService.deleteNote(id);
 			apiResponse = new ApiResponse("Note Successfully Deleted", 1, note);
 		}
 		return apiResponse;
 	}
 
 	@Override
-	public ApiResponse trashNote(Integer id, String token) {
+	public ApiResponse trashAndRestoreNote(Integer id, String token) {
+		boolean flag = false;
 		String email = jwtToken.decodeToken(token);
 		Note note = noteRepo.findById(id).orElseThrow(() -> new NoteException());
 		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserException());
 		if (note != null && user != null) {
-			note.setInTrash(true);
-			note.setTrashedDate(new Date());
+			if (!note.isInTrash()) {
+				note.setInTrash(true);
+				note.setTrashedDate(new Date());
+				note.setInArchieve(false);
+				note.setPined(false);
+				flag = true;
+			} else {
+				note.setInTrash(false);
+				note.setTrashedDate(null);
+			}
 		}
-		noteRepo.save(note);
-		apiResponse = new ApiResponse("Note successfully moved to trash", 1, null);
-
+		Note savedNote = noteRepo.save(note);
+		elasticService.updateNote(savedNote);
+		if (flag) {
+			apiResponse = new ApiResponse("Note Trashed", 1, null);
+		}else apiResponse = new ApiResponse("Note Restored", 1, null);
+		
 		return apiResponse;
 	}
 
 	@Override
-	public ApiResponse archieveNote(Integer id, String token) {
+	public ApiResponse archieveAndUnarchiveNote(Integer id, String token) {
+		boolean flag = false;
 		String email = jwtToken.decodeToken(token);
 		Note note = noteRepo.findById(id).orElseThrow(() -> new NoteException());
 		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserException());
 		if (note != null && user != null) {
-			note.setInArchieve(true);
+			if (!note.isInArchieve()) {
+				note.setInArchieve(true);
+				note.setInTrash(false);
+				note.setPined(false);
+				flag = true;
+			} else
+				note.setInArchieve(false);
 		}
-		noteRepo.save(note);
-		apiResponse = new ApiResponse("Note successfully moved to Archieves", 1, null);
+		Note savedNote = noteRepo.save(note);
+		elasticService.updateNote(savedNote);
+		if (flag) {
+			apiResponse = new ApiResponse("Note successfully Archieves", 1, null);
+		} else
+			apiResponse = new ApiResponse("Note successfully Unarchieved", 1, null);
 
 		return apiResponse;
 	}
@@ -161,42 +196,17 @@ public class NoteService implements INoteService {
 			LocalDate date2 = date.plusDays(7);
 			if (date2.compareTo(currentDate) < 0) {
 				noteRepo.deleteById(note.getId());
+				elasticService.deleteNote(note.getId());
 			}
 		});
 	}
 
 	@Override
-	public ApiResponse searchNoteByTitle(String title) {
-		apiResponse = new ApiResponse("Note List", 1, noteRepo.findByTitle(title));
-		return apiResponse;
-	}
-
-	@Override
-	public ApiResponse unarchieveNote(Integer id, String token) {
-		String email = jwtToken.decodeToken(token);
-		Note note = noteRepo.findById(id).orElseThrow(() -> new NoteException());
-		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserException());
-		if (note != null && user != null) {
-			note.setInArchieve(false);
-		}
-		noteRepo.save(note);
-		apiResponse = new ApiResponse("Note successfully Unarchieved", 1, null);
-
-		return apiResponse;
-	}
-
-	@Override
-	public ApiResponse restoreNote(Integer id, String token) {
-		String email = jwtToken.decodeToken(token);
-		Note note = noteRepo.findById(id).orElseThrow(() -> new NoteException());
-		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserException());
-		if (note != null && user != null) {
-			note.setInTrash(false);
-			note.setTrashedDate(null);
-		}
-		noteRepo.save(note);
-		apiResponse = new ApiResponse("Note successfully restored", 1, null);
-
+	public ApiResponse searchNoteByKeyword(String key, String token)
+			throws IllegalArgumentException, UnsupportedEncodingException {
+//		apiResponse = new ApiResponse("Note List", 1, noteRepo.findByTitle(key));
+		List<Note> noteList = elasticService.searchAll(key, token);
+		apiResponse = new ApiResponse("Note List", 1, noteList);
 		return apiResponse;
 	}
 
@@ -209,7 +219,9 @@ public class NoteService implements INoteService {
 		if (note != null && user != null) {
 			note.setReminder(date);
 		}
-		noteRepo.save(note);
+		Note savedNote = noteRepo.save(note);
+		elasticService.updateNote(savedNote);
+
 		apiResponse = new ApiResponse("Note successfully added to Reminder", 1, null);
 
 		return apiResponse;
@@ -229,16 +241,26 @@ public class NoteService implements INoteService {
 
 	@Override
 	public ApiResponse pinAndUnpinNote(Integer id, String token) {
+		boolean flag = false;
 		String email = jwtToken.decodeToken(token);
 		Note note = noteRepo.findById(id).orElseThrow(() -> new NoteException());
 		User user = userRepo.findByEmail(email).orElseThrow(() -> new UserException());
 		if (note != null && user != null) {
 			if (note.isPined() == false) {
 				note.setPined(true);
-			}else note.setPined(false);
+				note.setInArchieve(false);
+				note.setInTrash(false);
+				flag = true;
+			} else
+				note.setPined(false);
 		}
-		noteRepo.save(note);
-		apiResponse = new ApiResponse("Note successfully pinned", 1, null);
+		Note savedNote = noteRepo.save(note);
+		elasticService.updateNote(savedNote);
+
+		if (flag) {
+			apiResponse = new ApiResponse("Note successfully pinned", 1, null);
+		} else
+			apiResponse = new ApiResponse("Note successfully unpinned", 1, null);
 
 		return apiResponse;
 	}

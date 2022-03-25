@@ -1,6 +1,7 @@
 package com.bridgelabz.fundoo_notes.note.controller;
 
 
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ import com.bridgelabz.fundoo_notes.note.repository.NotesRepository;
 import com.bridgelabz.fundoo_notes.note.service.INoteService;
 import com.bridgelabz.fundoo_notes.utility.ApiResponse;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api")
@@ -33,71 +36,65 @@ public class NoteController {
 	@Autowired
 	INoteService iNoteService;
 	
-	@Autowired
-	NotesRepository noteRepo;
-	
 	@GetMapping("/notes")
+	@ApiOperation("This api is used for getting all the records from Note")
     public ResponseEntity<ApiResponse> getAllUser() {
 		ApiResponse response = iNoteService.getNotes();
         return new ResponseEntity<ApiResponse>(response,HttpStatus.OK);
 	}
 	
 	@PostMapping("/note")
+	@ApiOperation("This api is used for creating a new note")
 	public ResponseEntity<ApiResponse> postNote(@RequestHeader String token, @RequestBody NoteDto noteDto) {
 		ApiResponse response = iNoteService.postNote(token, noteDto);
 		return new ResponseEntity<ApiResponse>(response,HttpStatus.OK);
 	}
 	
 	@GetMapping("/searchnote")
-    public ResponseEntity<ApiResponse> searchNote(@RequestParam String title) {
-		ApiResponse response = iNoteService.searchNoteByTitle(title);
+	@ApiOperation("This api is used for serching a note based on keyword")
+    public ResponseEntity<ApiResponse> searchNote(@RequestParam String key, @RequestHeader String token) throws IllegalArgumentException, UnsupportedEncodingException {
+		ApiResponse response = iNoteService.searchNoteByKeyword(key, token);
         return new ResponseEntity<ApiResponse>(response,HttpStatus.OK);
 	}
 	
 	@PutMapping("/updateNote/{id}")
+	@ApiOperation("This api is used for updating a note")
 	public ResponseEntity<ApiResponse> updateNote(@PathVariable Integer id, @RequestBody NoteDto noteDto) {
 		ApiResponse response = iNoteService.updateNote(id,noteDto);
 		return new ResponseEntity<ApiResponse>(response , HttpStatus.OK);	
 	}
 	
 	@DeleteMapping("/note/{id}")
+	@ApiOperation("This api is used for deleting a note")
 	public ResponseEntity<ApiResponse> deleteNote(@PathVariable Integer id, @RequestHeader String token) {
 		ApiResponse response = iNoteService.deleteNote(id, token);
 		return new ResponseEntity<ApiResponse>(response , HttpStatus.OK);	
 	}
 	
 	@PutMapping("/trashNote/{id}")
-	public ResponseEntity<ApiResponse> trashNote(@PathVariable Integer id, @RequestHeader String token) {
-		ApiResponse response = iNoteService.trashNote(id, token);
+	@ApiOperation("This api is used for trashing and restoring a note")
+	public ResponseEntity<ApiResponse> trashAndRestoreNote(@PathVariable Integer id, @RequestHeader String token) {
+		ApiResponse response = iNoteService.trashAndRestoreNote(id, token);
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
 	
 	@PutMapping("/archieveNote/{id}")
+	@ApiOperation("This api is used for archiving and unarchiving a note")
 	public ResponseEntity<ApiResponse> archieveNote(@PathVariable Integer id, @RequestHeader String token) {
-		ApiResponse response = iNoteService.archieveNote(id, token);
-		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
-	}
-	
-	@PutMapping("/unarchieveNote/{id}")
-	public ResponseEntity<ApiResponse> unarchieveNote(@PathVariable Integer id, @RequestHeader String token) {
-		ApiResponse response = iNoteService.unarchieveNote(id, token);
-		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
-	}
-	
-	@PutMapping("/restoneNote/{id}")
-	public ResponseEntity<ApiResponse> restoreNote(@PathVariable Integer id, @RequestHeader String token) {
-		ApiResponse response = iNoteService.restoreNote(id, token);
+		ApiResponse response = iNoteService.archieveAndUnarchiveNote(id, token);
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
 	
 	@PutMapping("/notereminder/{id}")
+	@ApiOperation("This api is used for setting reminder for a note")
 	public ResponseEntity<ApiResponse> remindNote(@PathVariable Integer id, @RequestHeader String token, @RequestParam Date date) {
 		ApiResponse response = iNoteService.remindNote(id, token, date);
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
 	
 	@PutMapping("/pinnote/{id}")
-	public ResponseEntity<ApiResponse> remindNote(@PathVariable Integer id, @RequestHeader String token) {
+	@ApiOperation("This api is used for pinning and unpinning a note")
+	public ResponseEntity<ApiResponse> pinAndUnPinNote(@PathVariable Integer id, @RequestHeader String token) {
 		ApiResponse response = iNoteService.pinAndUnpinNote(id, token);
 		return new ResponseEntity<ApiResponse>(response, HttpStatus.OK);
 	}
