@@ -33,6 +33,12 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
+
+    @GetMapping("/greet")
+    @ApiOperation("This api is used for home")
+    public ResponseEntity<String> greet() {
+        return new ResponseEntity<>("Hello! Welcome to Fundoo Notes", HttpStatus.OK);
+    }
     
     @GetMapping("/users")
     @ApiOperation("This api is used for getting all records from User")
