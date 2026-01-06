@@ -2,11 +2,12 @@ package com.bridgelabz.fundoo_notes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class FundooNotesApplication {
+public class FundooNotesApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(FundooNotesApplication.class, args);

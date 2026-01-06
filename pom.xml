@@ -12,6 +12,7 @@
 	<groupId>com.bridgelabz</groupId>
 	<artifactId>fundoo_Notes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
 	<name>fundoo_Notes</name>
 	<description>fundoo_Notes</description>
 	<properties>
